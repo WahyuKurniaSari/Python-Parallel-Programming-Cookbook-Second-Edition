@@ -399,14 +399,30 @@ class TestApp(unittest.TestCase):
     #     threadutama.join()
     #     respon=self.readfile('./Chapter02/apigempa.txt')
     #     self.assertNotRegex(respon, "kosong")
+    # def test_07_idaTujuh1184113(self):
+    #    from Chapter02.IdaTujuh1184113 import idaTujuh1184113,Director
+    #    threadutama = idaTujuh1184113("Thread Utama ", 2,5,5,'ida')
+    #    threaddirector= Director("Thread Director ", 1,'ida')
+    #    threaddirector.start()
+    #    threadutama.start()
+    #    threaddirector.join()
+    #    threadutama.join()
+    #    respon=self.readfile('./Chapter02/ida.txt')
+    #    self.assertNotRegex(respon, "kosong")
+    
+    def test_07_WahyuKurniaSariTujuh1184001(self):
+        from Chapter02.WahyuKurniaSariTujuh1184001 import worker
+        threads =  []
+        self.assertEqual(threads, True) 
+        
+        
+        #self.assertEqual(threads) 
+        
+        #self.assertNotRegex(threads, "true")
+         
+        # self.assertEqual(threads, True) 
 
-    def test_07_idaTujuh1184113(self):
-        from Chapter02.IdaTujuh1184113 import idaTujuh1184113,Director
-        threadutama = idaTujuh1184113("Thread Utama ", 2,5,5,'ida')
-        threaddirector= Director("Thread Director ", 1,'ida')
-        threaddirector.start()
-        threadutama.start()
-        threaddirector.join()
-        threadutama.join()
-        respon=self.readfile('./Chapter02/ida.txt')
-        self.assertNotRegex(respon, "kosong")
+
+    
+APP = TestApp()
+APP.test_07_WahyuKurniaSariTujuh1184001()
