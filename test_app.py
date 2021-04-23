@@ -413,24 +413,12 @@ class TestApp(unittest.TestCase):
     #    respon=self.readfile('./Chapter02/ida.txt')
     #    self.assertNotRegex(respon, "kosong")
     
-    def test_07_WahyuKurniaSariTujuh1184001(self):
+  def test_07_WahyuKurniaSariTujuh1184001(self):
         from Chapter02.WahyuKurniaSariTujuh1184001 import worker
-        threads =  []
-        self.assertEqual(threads, True) 
-        
-        
-        #self.assertEqual(threads) 
-        
-        #self.assertNotRegex(threads, "true")
-         
-        # self.assertEqual(threads, True) 
+        response = worker()
+        self.assertEqual(response, True) 
 
 
-<<<<<<< HEAD
-    
-APP = TestApp()
-APP.test_07_WahyuKurniaSariTujuh1184001()
-=======
     # def test_07_idaTujuh1184113(self):
     #     from Chapter02.IdaTujuh1184113 import idaTujuh1184113,Director
     #     threadutama = idaTujuh1184113("Thread Utama ", 2,5,5,'ida')
@@ -453,6 +441,28 @@ APP.test_07_WahyuKurniaSariTujuh1184001()
     #    respon=self.readfile('./Chapter02/ida.txt')
     #    self.assertNotRegex(respon, "kosong")
     
+   # def test_07_rizaluarditujuh_1184102(self):
+   #    from Chapter02.RizaluardiTujuh1184102 import RizaluardiIms,RizaluardiTujuh1184102
+   #    nganu1 = RizaluardiIms("Thread 1", 'provinsi')
+   #     nganu2 = RizaluardiTujuh1184102("Thread 2",'provinsi')
+   #     nganu1.start()
+   #     nganu2.start()
+   #     nganu1.join()
+   #     nganu2.join()
+   #     respon=self.readfile('./Chapter02/provinsi')
+   #     self.assertNotRegex(respon, "Jangan kosong datanya")
+        
+    #def test_07_josuanseftujuh1184091(self):
+    #   from Chapter02.JosuansefTujuh_1184091 import Josuansef1184091Tujuh_Producer,Josuansef1184091Tujuh_Consumer
+    #   threadjosuaproducer = Josuansef1184091Tujuh_Producer("Thread utama ", 2,5,5,'joss')
+    #   threadjosuaconsumer = Josuansef1184091Tujuh_Consumer("Thread baca file ", 1,'joss')
+    #   threadjosuaconsumer.start()
+    #   threadjosuaproducer.start()
+    #   threadjosuaconsumer.join()
+    #   threadjosuaproducer.join()
+    #   respon=self.readfile('./Chapter02/joss')
+    #   self.assertNotRegex(respon, "kosong")
+
     # def test_07_josuanseftujuh1184091(self):
     #     from Chapter02.JosuansefTujuh_1184091 import Josuansef1184091Tujuh_Producer,Josuansef1184091Tujuh_Consumer
     #     threadjosuaproducer = Josuansef1184091Tujuh_Producer("Thread utama ", 2,5,5,'joss')
@@ -465,14 +475,25 @@ APP.test_07_WahyuKurniaSariTujuh1184001()
     #     self.assertNotRegex(respon, "kosong")
 
 
-    def test_07_iraTujuh1184024(self):
-        from Chapter02.IraTujuh1184024 import iraTujuh1184024,iraHandlingFile  
-        threadutama = iraTujuh1184024("Thread Utama ", 2,5,5,'ira')
-        threadhandling= iraHandlingFile("Thread handling File ", 1,'ira')
-        threadhandling.start()
-        threadutama.start()
-        threadhandling.join()
-        threadutama.join()
-        respon=self.readfile('./Chapter02/ira.txt')
-        self.assertNotRegex(respon, "kosong")
->>>>>>> 5cfa9df9a705bb07c2e910958b0574f2d419fff2
+
+   # def test_07_iraTujuh1184024(self):
+   #     from Chapter02.IraTujuh1184024 import iraTujuh1184024,iraHandlingFile  
+   #     threadutama = iraTujuh1184024("Thread Utama ", 2,5,5,'ira')
+   #     threadhandling= iraHandlingFile("Thread handling File ", 1,'ira')
+   #     threadutama.start()
+   #     threadhandling.join()
+   #     threadutama.join()
+   #     respon=self.readfile('./Chapter02/ira.txt')
+   #    self.assertNotRegex(respon, "kosong")
+
+
+    #def test_07_iraTujuh1184024(self):
+    #    from Chapter02.IraTujuh1184024 import iraTujuh1184024,iraHandlingFile  
+    #    threadutama = iraTujuh1184024("Thread Utama ", 2,5,5,'ira')
+    #    threadhandling= iraHandlingFile("Thread handling File ", 1,'ira')
+    #    threadhandling.start()
+    #    threadutama.start()
+    #    threadhandling.join()
+    #    threadutama.join()
+    #    respon=self.readfile('./Chapter02/ira.txt')
+    #    self.assertNotRegex(respon, "kosong")
