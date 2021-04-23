@@ -18,7 +18,8 @@ import random
 import time
 
 num_worker_threads = 1
-
+q = queue.Queue()
+threads =[]
 
 def webservices():
     apiurl = 'https://pokeapi.co/api/v2/pokemon/pikachu'
@@ -26,8 +27,6 @@ def webservices():
     html = response.json()
     print(html["weight"])
     
-
-
 def run():
     webservices()
 
@@ -46,30 +45,25 @@ def worker():
             break
         do_work(item)
         q.task_done()
-    return True
    
+def main():
     
-
-q = queue.Queue()
-threads = []
-
-for i in range(num_worker_threads):
-    t = threading.Thread(target=worker)
-    t.start()
-    threads.append(t)
+    for i in range(num_worker_threads):
+        t = threading.Thread(target=worker)
+        t.start()
+        threads.append(t)
+        
+    for item in source():
+        q.put(item)
     
-
-for item in source():
-    q.put(item)
-
-    q.join()
-
-print('stop untuk perhitungan!')
-
-
-for i in range(num_worker_threads):
-    q.put(None)
-
-for t in threads:
-    t.join()
-
+        q.join()
+    
+    print('stop untuk perhitungan!')
+    
+    
+    for i in range(num_worker_threads):
+        q.put(None)
+    
+    for t in threads:
+        t.join()
+    return True

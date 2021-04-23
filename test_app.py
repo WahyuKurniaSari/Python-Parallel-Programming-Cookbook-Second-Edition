@@ -508,9 +508,8 @@ class TestApp(unittest.TestCase):
     #    self.assertNotRegex(respon, "kosong")
 
     def test_07_WahyuKurniaSariTujuh1184001(self):
-        from Chapter02.WahyuKurniaSariTujuh1184001 import worker
-        response = worker()
+        from Chapter02.WahyuKurniaSariTujuh1184001 import main
+        response = main()
         self.assertEqual(response, True) 
         
-
 
