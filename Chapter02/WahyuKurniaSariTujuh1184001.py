@@ -11,18 +11,23 @@ Created on Mon Apr 19 19:23:22 2021
 
 @author: NITRO 5 ACER
 """
+
 import queue
 import threading
 import random
 import time
 
 num_worker_threads = 1
+
+
 def webservices():
     apiurl = 'https://pokeapi.co/api/v2/pokemon/pikachu'
     response = time.get(apiurl)
     html = response.json()
     print(html["weight"])
     
+
+
 def run():
     webservices()
 
@@ -34,17 +39,18 @@ def source():
 
 
 def worker():
-    return True
+  #  return True
     while True:
         item = q.get()
         if item is None:
             break
         do_work(item)
         q.task_done()
-        False
-   # return False   
+    return True
+   
+    
+
 q = queue.Queue()
-#def main():
 threads = []
 
 for i in range(num_worker_threads):
@@ -56,27 +62,14 @@ for i in range(num_worker_threads):
 for item in source():
     q.put(item)
 
-# block until all tasks are done
     q.join()
 
 print('stop untuk perhitungan!')
 
-# stop workers
+
 for i in range(num_worker_threads):
     q.put(None)
 
 for t in threads:
     t.join()
-#return True
-   
-    # threads = []
-    
-   # for i in range(4):
-    #  thread = threading.Thread(target=run)
-    #  thread.start()
-    #  threads.append(thread)
-    
-    #for t in threads:
-  #    t.join() 
-  #  return True 
 

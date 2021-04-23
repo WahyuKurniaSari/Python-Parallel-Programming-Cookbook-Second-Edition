@@ -413,10 +413,9 @@ class TestApp(unittest.TestCase):
     #    respon=self.readfile('./Chapter02/ida.txt')
     #    self.assertNotRegex(respon, "kosong")
     
-  def test_07_WahyuKurniaSariTujuh1184001(self):
-        from Chapter02.WahyuKurniaSariTujuh1184001 import worker
-        response = worker()
-        self.assertEqual(response, True) 
+
+        
+
 
 
     # def test_07_idaTujuh1184113(self):
@@ -441,9 +440,9 @@ class TestApp(unittest.TestCase):
     #    respon=self.readfile('./Chapter02/ida.txt')
     #    self.assertNotRegex(respon, "kosong")
     
-   # def test_07_rizaluarditujuh_1184102(self):
+    #def test_07_rizaluarditujuh_1184102(self):
    #    from Chapter02.RizaluardiTujuh1184102 import RizaluardiIms,RizaluardiTujuh1184102
-   #    nganu1 = RizaluardiIms("Thread 1", 'provinsi')
+   #     nganu1 = RizaluardiIms("Thread 1", 'provinsi')
    #     nganu2 = RizaluardiTujuh1184102("Thread 2",'provinsi')
    #     nganu1.start()
    #     nganu2.start()
@@ -475,18 +474,6 @@ class TestApp(unittest.TestCase):
     #     self.assertNotRegex(respon, "kosong")
 
 
-
-   # def test_07_iraTujuh1184024(self):
-   #     from Chapter02.IraTujuh1184024 import iraTujuh1184024,iraHandlingFile  
-   #     threadutama = iraTujuh1184024("Thread Utama ", 2,5,5,'ira')
-   #     threadhandling= iraHandlingFile("Thread handling File ", 1,'ira')
-   #     threadutama.start()
-   #     threadhandling.join()
-   #     threadutama.join()
-   #     respon=self.readfile('./Chapter02/ira.txt')
-   #    self.assertNotRegex(respon, "kosong")
-
-
     #def test_07_iraTujuh1184024(self):
     #    from Chapter02.IraTujuh1184024 import iraTujuh1184024,iraHandlingFile  
     #    threadutama = iraTujuh1184024("Thread Utama ", 2,5,5,'ira')
@@ -497,3 +484,10 @@ class TestApp(unittest.TestCase):
     #    threadutama.join()
     #    respon=self.readfile('./Chapter02/ira.txt')
     #    self.assertNotRegex(respon, "kosong")
+    
+    def test_07_WahyuKurniaSariTujuh1184001(self):
+        from Chapter02.WahyuKurniaSariTujuh1184001 import worker
+        response = worker()
+        self.assertEqual(response, True) 
+        
+
